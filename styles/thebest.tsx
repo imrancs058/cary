@@ -42,7 +42,7 @@ export const glassyBackground: React.CSSProperties = {
      left: '3.5rem',
      margin: '1.5rem',
      color: "#000",
-     fontFamily: "Satoshi",
+     //fontFamily: "Satoshi",
      fontStyle: "normal",
      fontSize: "15px",
      fontWeight: 600,
@@ -61,7 +61,7 @@ export const numberList: React.CSSProperties = {
      top: '2rem',
      margin: '1.5rem',
      color: "#FFF",
-     fontFamily: "Satoshi",
+     //fontFamily: "Satoshi",
      fontWeight: 700,
      fontSize: "15px",
 };
@@ -83,7 +83,7 @@ export const numberByList: React.CSSProperties = {
      top: '13rem',
      margin: '1.5rem',
      color: "#000",
-     fontFamily: "Satoshi",
+     //fontFamily: "Satoshi",
      fontStyle: "normal",
      fontSize: "15px",
      fontWeight: 600,
@@ -99,7 +99,7 @@ export const numberByListForCard: React.CSSProperties = {
      top: '23rem',
      margin: '1.5rem',
      color: "#000",
-     fontFamily: "Satoshi",
+     //fontFamily: "Satoshi",
      fontStyle: "normal",
      fontSize: "15px",
      fontWeight: 600,
@@ -123,7 +123,7 @@ export const headingText: React.CSSProperties = {
 
 export const cardParagraph: React.CSSProperties = {
      color: "#000",
-     fontFamily: "Satoshi",
+     //fontFamily: "Satoshi",
      fontSize: "15px",
      fontStyle: "normal",
      fontWeight: 600,
@@ -132,7 +132,7 @@ export const cardParagraph: React.CSSProperties = {
 };
 
 export const cardParagraphForCard: React.CSSProperties = {
-     fontFamily: "Satoshi",
+     //fontFamily: "Satoshi",
      fontSize: "1.6rem",
      fontWeight: 700,
      // lineHeight: "57px",

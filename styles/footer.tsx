@@ -24,7 +24,7 @@ export const footerLogo: React.CSSProperties = {
 };
 
 export const footerText: React.CSSProperties = {
-     fontFamily: "Satoshi",
+     // fontFamily: "Satoshi",
      fontSize: "1.1rem",
      fontWeight: 500,
      lineHeight: "0.1rem",

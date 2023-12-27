@@ -1,19 +1,19 @@
 import { Col, Row } from "react-bootstrap";
 import Image from "next/image";
 import folder from "../../public/folder.png";
-import {Question} from '../../icons/question'
-import {Share} from '../../icons/share'
+import { Question } from '../../icons/question'
+import { Share } from '../../icons/share'
 
 interface IFolderCard {
   folderName: string
 }
-const FolderCard: React.FC<IFolderCard> = ({folderName}) => {
+const FolderCard: React.FC<IFolderCard> = ({ folderName }) => {
   return (
     <>
       <Col
         style={{
           border: "1px solid #E7E7E7",
-          borderRadius: "35px 35px 35px 35px",
+          borderRadius: "35px 35px 61px 61px",
           paddingTop: "15px",
           display: "flex",
           flexDirection: "column",
@@ -68,7 +68,7 @@ const FolderCard: React.FC<IFolderCard> = ({folderName}) => {
           >
             <Share />
           </div>
-          
+
         </div>
         <div
           style={{

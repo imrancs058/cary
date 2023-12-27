@@ -45,22 +45,23 @@ const CardItem = ({ number, content, imageUrl }: any) => {
                                    </div>
                               </div>
                          </div>
-                         <span>
-                              <span className="d-flex">
-                                   <p style={cardParagraph}>{content}</p>{" "}
-                                   <span className="mt-3" onClick={toggleContent}>
-                                        {isContentVisible ? <Off /> : <On />}
-                                   </span>
+                    </Link>
+                    <span>
+                         <span className="d-flex">
+                              <p style={cardParagraph}>{content}</p>{" "}
+                              <span className="mt-3" onClick={toggleContent}>
+                                   {isContentVisible ? <Off /> : <On />}
                               </span>
                          </span>
-                         {isContentVisible && (
-                              <ul>
-                                   <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
-                                   <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
-                                   <li>uisque vehicula malesuada auctor. Ut pulvinar odio lectus, eget consequat arcu dignissim quis. Aenean dignissim.</li>
-                              </ul>
-                         )}
-                    </Link>
+                    </span>
+                    {isContentVisible && (
+                         <ul>
+                              <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
+                              <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
+                              <li>uisque vehicula malesuada auctor. Ut pulvinar odio lectus, eget consequat arcu dignissim quis. Aenean dignissim.</li>
+                         </ul>
+                    )}
+
                </div>
 
           </Col>

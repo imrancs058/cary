@@ -71,15 +71,18 @@ a {
 
 .main_layout_title {
   color: black;
-  font-size: 50px;
+  font-size: 38px;
   text-align: center;
   font-style: normal;
-  font-family: Merriweather;
-  font-weight: 600;
+  font-family: "Merriweather";
+  font-weight: 700;
   line-height: 50px;
   text-transform: capitalize;
   display: flex;
   justify-content: end;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
 }
 
 .image_upload_row {
@@ -116,12 +119,13 @@ a {
 
 .image_uploader_div_2 {
   color: black;
-  font-family: Satoshi;
+  /* font-family: Satoshi; */
   font-size: 35px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
+  margin-bottom: 20px;
 }
 
 .image_uploader_div_3 {
@@ -193,17 +197,7 @@ a {
     padding-right: 0px;
   }
 
-  .main_layout_title {
-    font-size: 18px;
-    text-align: left;
-    font-style: normal;
-    font-family: Merriweather;
-    font-weight: 700;
-    line-height: 30px;
-    text-transform: capitalize;
-    display: flex;
-    justify-content: end;
-  }
+
 
   .image_upload_row {
     padding-left: 0px;
@@ -228,9 +222,7 @@ a {
     align-items: center;
   }
 
-  .image_uploader_div_2 {
-    font-size: 15px;
-  }
+
 
   .image_uploader_div_3 {
     font-size: 14px;
