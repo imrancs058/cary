@@ -126,6 +126,7 @@ a {
   line-height: normal;
   text-transform: capitalize;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .image_uploader_div_3 {
@@ -206,13 +207,13 @@ a {
   }
 
   .image_uploader_main_div {
-    height: 178px;
+    height: 275px;
     border-radius: 15px;
   }
 
   .image_uploader_main_div_files {
     border: 3px dashed #9d22eb;
-    height: 159px;
+    height: 209px;
     width: 100%;
     border-radius: 15px;
     margin-top: 20px;

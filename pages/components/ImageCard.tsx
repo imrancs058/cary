@@ -8,7 +8,7 @@ interface IImageCard {
   title?: string;
   description?: string;
 }
-const ImageCard: React.FC<IImageCard> = ({ number, circleNumber }) => {
+const ImageCard: React.FC<IImageCard> = ({ img, number, circleNumber }) => {
   return (
     <>
       <Col
@@ -34,8 +34,7 @@ const ImageCard: React.FC<IImageCard> = ({ number, circleNumber }) => {
             height: "464px",
             padding: "10px",
             borderRadius: "30px",
-            background:
-              "url('https://s3-alpha-sig.figma.com/img/52ff/d5b9/f6b60977d5a76cdab5b6227964cf9cd8?Expires=1704067200&Signature=RUy7ucUnJnS8lQmpiRpVcTQzCJiYP6fFX94MtN1cSIX~wTW69kLY91zh8gmcTfrIYaNdYk0G4PH~1uF~V4cz-jyxpmtml7XHDzUIuYX4JvcPJUAK7eUqcZzjbbHrIzB0ipxh7fBZh31uk5JLT0k94FhgY8nhcRLq8V-mmKzQRoCkxkz28O1jFSe1SKOqUm7R0PiKnFE0Pv6HKJAmQYOje4GygqlXpYdW-ARCOWIXuUMlCqTnewhioy6YRoATN0UUjiPo57ZIGvf7UykoLAZg1af7bLFNQ120gDbjZXi2Dn13fC2dcRdmx3wfBd5VUlT1M~kAyakvthdr1PAOhhQq1Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4') lightgray 0px -7.219px / 100% 129.757% no-repeat",
+            background: `url(${img})`,
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",

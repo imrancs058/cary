@@ -67,6 +67,7 @@ const MainLayout = () => {
       ? setIsUploadedFiles(false)
       : setIsUploadedFiles(true);
   }, [selectedFiles]);
+  console.log(selectedFiles, "selectedFiles")
   return (
     <div className="bg-white p-4">
       <Col>
@@ -93,7 +94,8 @@ const MainLayout = () => {
         <Row className="image_cards_row">
           {selectedFiles?.map((file, index) => (
             <Col key={index} lg={4} md={4} sm={12} xs={12}>
-              <ImageCard number={index + 1} circleNumber={`${index + 1}/10`} />
+
+              <ImageCard img={URL.createObjectURL(file.file)} number={index + 1} circleNumber={`${index + 1}/10`} />
             </Col>
           ))}
 

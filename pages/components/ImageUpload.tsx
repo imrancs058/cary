@@ -31,10 +31,12 @@ const ImageUploader: React.FC<IImageUploader> = ({ isUploadedFiles, selectedFile
       if (selectedFiles.length === 10) {
         return;
       } else {
+
         acceptedFiles.forEach((file: File) => {
           const reader = new FileReader();
           reader.onload = () => {
             const binaryStr = reader.result;
+            console.log(reader, binaryStr, "file")
             setSelectedFiles((prev: IBinaryFile[]) => [
               ...prev,
               {
