@@ -61,6 +61,7 @@ const ImageUploader: React.FC<IImageUploader> = ({ isUploadedFiles, selectedFile
   });
   return (
     <div
+
       className={
         isUploadedFiles
           ? "image_uploader_main_div_files"

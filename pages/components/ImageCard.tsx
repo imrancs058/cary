@@ -23,7 +23,7 @@ const ImageCard: React.FC<IImageCard> = ({ img, number, circleNumber }) => {
           display: "flex",
           flexDirection: "column",
           gap: "10px",
-          background: "#FBF7FE",
+          background: "white",
           marginTop: "20px",
           width: "100%"
         }}

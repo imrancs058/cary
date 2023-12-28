@@ -19,6 +19,13 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
           gap: "10px",
           background: "#FBF7FE",
           marginTop: "20px",
+
+          width: "361px",
+          height: "474px"
+
+
+
+
         }}
       >
         <div
@@ -33,17 +40,27 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
         >
           Create your events
         </div>
-        <div style={{ width: "100%" }}>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+        }}>
           <input
             type="text"
             style={{
-              borderRadius: "600px",
-              height: "60px",
-              width: "100%",
               border: "1px solid rgba(156, 134, 170, 0.48)",
               paddingLeft: "10px",
-              background: "white",
-              color: "black"
+              background: "rgba(255, 255, 255, 1)",
+              color: "black",
+              width: "321px",
+              height: "60px",
+              top: "1147px",
+              left: "215px",
+
+              borderRadius: "600px",
+
+
             }}
             onChange={(e) => setFolderName(e.target.value)}
           />
@@ -68,7 +85,12 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
               fontStyle: "normal",
               fontWeight: 700,
               lineHeight: "normal",
-              padding: "19px 4px", width: "99%"
+              padding: "19px 4px", width: "252px",
+              height: "60px",
+
+
+
+
             }}
             onClick={() =>
               setFolders((prev: any) => [
@@ -86,7 +108,6 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
         <div
           style={{
             color: "#000",
-
             fontFamily: "Merriweather",
             fontSize: "22px",
             fontStyle: "normal",
@@ -94,7 +115,7 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
             lineHeight: "normal",
           }}
         >
-          TRY:
+          Try:
         </div>
         <button
           style={{
@@ -102,6 +123,7 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
             padding: "14px 36px",
             border: "1px solid rgba(118, 29, 182, 0.12)",
             background: "rgba(164, 34, 244, 0.07)",
+
           }}
           onClick={() =>
             setFolders((prev: any) => [
@@ -116,6 +138,15 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
           <span
             style={{
               color: "#A422F4",
+              fontFamily: "../../styles/fonts",
+              fontSize: "18px",
+              fontWeight: 500,
+              lineHeight: "24px",
+              letterSpacing: "0em",
+              textAlign: "left",
+              padding: "14px 36px",
+
+
             }}
           >
             Job Dinner
@@ -127,6 +158,7 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
             padding: "14px 36px",
             border: "1px solid rgba(118, 29, 182, 0.12)",
             background: "rgba(164, 34, 244, 0.07)",
+            fontFamily: "../../styles/fonts",
           }}
           onClick={() =>
             setFolders((prev: any) => [
@@ -141,6 +173,10 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
           <span
             style={{
               color: "#A422F4",
+              fontFamily: "../../styles/fonts",
+              fontSize: "18px",
+              fontWeight: 500,
+              lineHeight: "24px",
             }}
           >
             Dating with Friend
@@ -152,6 +188,7 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
             padding: "14px 36px",
             border: "1px solid rgba(118, 29, 182, 0.12)",
             background: "rgba(164, 34, 244, 0.07)",
+            fontFamily: "../../styles/fonts",
           }}
           onClick={() =>
             setFolders((prev: any) => [
@@ -166,12 +203,16 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
           <span
             style={{
               color: "#A422F4",
+              fontFamily: "../../styles/fonts",
+              fontSize: "18px",
+              fontWeight: 500,
+              lineHeight: "24px",
             }}
           >
             Lunch with Friend
           </span>
         </button>
-      </Col>
+      </Col >
     </>
   );
 };

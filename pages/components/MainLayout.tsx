@@ -70,42 +70,51 @@ const MainLayout = () => {
   console.log(selectedFiles, "selectedFiles")
   return (
     <div className="bg-white p-4">
-      <Col>
-        <Row className="main_layout_title_row">
-          <Col lg={10} md={10} sm={8} xs={8}>
-            <div className="main_layout_title">
-              I choose the best style and the hottest photo based on psychology
-              and science.
-            </div>
-          </Col>
-          <Col lg={2} md={2} sm={4} xs={4}>
-            <div style={{ display: "flex", justifyContent: "end" }}>
-              <ShareAll />
-            </div>
-          </Col>
-        </Row>
-        <Row className="image_upload_row">
-          <ImageUploader
-            isUploadedFiles={isUploadedFiles}
-            selectedFiles={selectedFiles}
-            setSelectedFiles={setSelectedFiles}
-          />
-        </Row>
-        <Row className="image_cards_row">
-          {selectedFiles?.map((file, index) => (
-            <Col key={index} lg={4} md={4} sm={12} xs={12}>
-
-              <ImageCard img={URL.createObjectURL(file.file)} number={index + 1} circleNumber={`${index + 1}/10`} />
+      <Col >
+        <div className="row " style={{
+          background: "rgba(245, 236, 252, 0.44)",
+          padding: '100px',
+          position: 'relative',
+          top: '-30px',
+          left: '10px'
+        }}>
+          <Row className="main_layout_title_row">
+            <Col lg={10} md={10} sm={8} xs={8}>
+              <div className="main_layout_title text-center">
+                I choose the best style and the hottest photo <br /> based on psychology
+                and science.
+              </div>
             </Col>
-          ))}
+            <Col lg={2} md={2} sm={4} xs={4}>
+              <div className="mt-2" style={{ justifyContent: "end", marginTop: "42px" }}>
+                <ShareAll />
+              </div>
+            </Col>
+          </Row>
+          <Row className="image_upload_row">
+            <ImageUploader
+              isUploadedFiles={isUploadedFiles}
+              selectedFiles={selectedFiles}
+              setSelectedFiles={setSelectedFiles}
+            />
+          </Row>
 
-          {/* <Col lg={4} md={4} sm={12} xs={12}>
+          <Row className="image_cards_row">
+            {selectedFiles?.map((file, index) => (
+              <Col key={index} lg={4} md={4} sm={12} xs={12}>
+
+                <ImageCard img={URL.createObjectURL(file.file)} number={index + 1} circleNumber={`${index + 1}/10`} />
+              </Col>
+            ))}
+
+            {/* <Col lg={4} md={4} sm={12} xs={12}>
             <ImageCard number={2} circleNumber="7/10" />
           </Col>
           <Col lg={4} md={4} sm={12} xs={12}>
             <ImageCard number={3} circleNumber="3/10" />
           </Col> */}
-        </Row>
+          </Row>
+        </div>
         <Row className="cards_row">
           <Col lg={3} md={3} sm={12} xs={12}>
             <EventCard folders={folders} setFolders={setFolders} />

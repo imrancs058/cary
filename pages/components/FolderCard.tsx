@@ -1,6 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import Image from "next/image";
-import folder from "../../public/folder.png";
+import folder from "../../public/folder.svg";
 import { Question } from '../../icons/question'
 import { Share } from '../../icons/share'
 
@@ -13,13 +13,20 @@ const FolderCard: React.FC<IFolderCard> = ({ folderName }) => {
       <Col
         style={{
           border: "1px solid #E7E7E7",
-          borderRadius: "35px 35px 61px 61px",
-          paddingTop: "15px",
+          borderRadius: "35px",
+          padding: "15px",
           display: "flex",
           flexDirection: "column",
           gap: "10px",
           background: "#FBF7FE",
           marginTop: "20px",
+
+          width: "361px",
+          height: "474px"
+
+
+
+
         }}
       >
         <div
@@ -97,7 +104,7 @@ const FolderCard: React.FC<IFolderCard> = ({ folderName }) => {
         >
           <span
             style={{
-              color: "#A422F4",
+              color: "#A422F4", whiteSpace: "nowrap"
             }}
           >
             {folderName}

@@ -1,12 +1,23 @@
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
+import { Dropdown } from "react-bootstrap";
+
 
 const DropDown = () => {
   return (
-    <DropdownButton id="" title="John Doe" style={{ background: "white" }}>
-      <Dropdown.Item href="#">Follow On Instagram</Dropdown.Item>
-      <Dropdown.Item href="#">Logout</Dropdown.Item>
-    </DropdownButton>
+    <Dropdown >
+      <Dropdown.Toggle variant="secondary" id="customDropdown">
+        John Deo   <img src="arrow-down.svg" alt="Custom Icon" className="custom-svg-icon"></img>
+      </Dropdown.Toggle>
+      <Dropdown.Menu style={{ right: 0 }}>
+        <Dropdown.Item href="#"></Dropdown.Item>
+        <Dropdown.Item href="#">Follow on Instagram</Dropdown.Item>
+        <hr style={{
+          width: "180px",
+          color: "rgba(224, 221, 221, 1)",
+          marginLeft: "20px"
+        }} />
+        <Dropdown.Item href="#">Log out</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
   );
 };
 

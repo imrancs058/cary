@@ -78,10 +78,7 @@ const Thebest = () => {
           { number: 2, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
           { number: 3, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image6.png" },
           { number: 4, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image3.png" },
-          { number: 5, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image5.png" },
-          { number: 6, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image6.png" },],
-
-
+          ],
           [{ number: 1, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image1.png" },
           { number: 2, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
 
@@ -102,8 +99,31 @@ const Thebest = () => {
           [{ number: 1, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image1.png" },
           { number: 2, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
           { number: 3, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image6.png" },
-          { number: 4, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
-          { number: 3, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image1.png" },
+
+          ],
+          [{ number: 1, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image1.png" },
+          { number: 2, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
+
+          ],
+          [{ number: 1, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image1.png" },
+          { number: 2, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
+
+          ],
+          [{ number: 1, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image1.png" },
+          { number: 2, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
+
+          ],
+          [{ number: 1, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image1.png" },
+          { number: 2, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
+
+          ],
+          [{ number: 1, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image1.png" },
+          { number: 2, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
+
+          ],
+          [{ number: 1, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image1.png" },
+          { number: 2, content: "Lorem Ipsum has been the industry's standard dummy text ever since", imageUrl: "/image2.png" },
+
           ]
      ];
      useEffect(() => {

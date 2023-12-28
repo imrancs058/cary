@@ -6,8 +6,12 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 1920px;
   overflow-x: hidden;
+}
+
+.row>* {
+  padding: 0 !important;
 }
 
 
@@ -47,7 +51,7 @@ a {
 .image_div {
   display: flex;
   justify-content: start;
-  padding-left: 80px;
+  padding-left: 195px;
 }
 
 .user_logo_div {
@@ -55,7 +59,9 @@ a {
   justify-content: end;
   align-items: center;
   gap: 5px;
-  padding-right: 80px;
+  padding-right: 70px;
+  margin-top: 22px;
+
 }
 
 .menu_col {
@@ -69,19 +75,22 @@ a {
   padding-right: 80px;
 }
 
+
+
 .main_layout_title {
   color: black;
-  font-size: 38px;
+  font-size: 50px;
+  margin-left: 205px;
   text-align: center;
   font-style: normal;
   font-family: "Merriweather";
   font-weight: 700;
-  line-height: 50px;
+  line-height: 80px;
   text-transform: capitalize;
-  display: flex;
+  /* display: flex; */
   justify-content: end;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 
 }
 
@@ -94,8 +103,12 @@ a {
 }
 
 .image_uploader_main_div {
-  border: 3px dashed #9d22eb;
-  height: 300px;
+  background: rgba(255, 255, 255, 1);
+  border: 4px dashed #9d22eb;
+  border-style: dashed;
+  border-spacing: 10px;
+  border-width: 3px;
+  height: 492px;
   width: 100%;
   border-radius: 35px;
   margin-top: 20px;
@@ -106,6 +119,8 @@ a {
 }
 
 .image_uploader_main_div_files {
+  background: rgba(255, 255, 255, 1);
+
   border: 3px dashed #9d22eb;
   height: 150px;
   width: 100%;
@@ -120,9 +135,9 @@ a {
 .image_uploader_div_2 {
   color: black;
   /* font-family: Satoshi; */
-  font-size: 35px;
+  font-size: 30px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 650;
   line-height: normal;
   text-transform: capitalize;
   margin-bottom: 20px;
@@ -131,8 +146,8 @@ a {
 
 .image_uploader_div_3 {
   color: black;
-  font-family: Satoshi;
-  font-size: 24px;
+  font-family: "Satoshi";
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -184,6 +199,7 @@ a {
 
   .user_logo_div {
     padding-right: 0px;
+    margin-top: 22px;
   }
 
   .menu_col {
@@ -207,11 +223,15 @@ a {
   }
 
   .image_uploader_main_div {
-    height: 275px;
+    border: 4px dashed #9d22eb;
+    border-style: dashed;
+    background: rgba(255, 255, 255, 1);
+    height: 492px;
     border-radius: 15px;
   }
 
   .image_uploader_main_div_files {
+    background: rgba(255, 255, 255, 1);
     border: 3px dashed #9d22eb;
     height: 209px;
     width: 100%;
@@ -250,5 +270,162 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+#customDropdown {
+  background-color: white !important;
+  color: black;
+  border: none
+}
+
+#customDropdown::after {
+  content: none !important;
+}
+
+/* Style for the custom SVG icon */
+.custom-svg-icon {
+  width: 20px;
+  /* Adjust the icon width */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.dropdown-menu {
+  width: 222px !important;
+  height: 141px !important;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0em;
+}
+
+.dropdown-menu.show {
+  border-radius: 20px !important;
+  position: absolute !important;
+  left: -107px !important;
+  top: 15px !important;
+  overflow: hidden !important;
+
+}
+
+.dropdown-menu.show::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -11px;
+  left: 83%;
+  margin-left: -9px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent black transparent;
+
+  background-color: transparent;
+
+}
+
+.dropdown-item:hover {
+  background-color: white;
+
+}
+
+.dropdown-item {
+  font-weight: 500 !important;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .main_layout_title {
+    color: black;
+    font-size: 32px;
+    margin-left: 205px;
+    text-align: center;
+    font-style: normal;
+    font-family: "Merriweather";
+    font-weight: 700;
+    line-height: 80px;
+    text-transform: capitalize;
+    justify-content: end;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Medium Screens (Tablets): */
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main_layout_title {
+    color: black;
+    font-size: 32px;
+    margin-left: 205px;
+    text-align: center;
+    font-style: normal;
+    font-family: "Merriweather";
+    font-weight: 700;
+    line-height: 80px;
+    text-transform: capitalize;
+    justify-content: end;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Large Screens (Desktops): */
+
+
+@media only screen and (min-width: 992px) {
+  .main_layout_title {
+    color: black;
+    font-size: 32px;
+    margin-left: 205px;
+    text-align: center;
+    font-style: normal;
+    font-family: "Merriweather";
+    font-weight: 700;
+    line-height: 80px;
+    text-transform: capitalize;
+    justify-content: end;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Extra Large Screens (Large Desktops): */
+
+
+@media only screen and (min-width: 1200px) {
+  .main_layout_title {
+    color: black;
+    font-size: 39px;
+    margin-left: 205px;
+    text-align: center;
+    font-style: normal;
+    font-family: "Merriweather";
+    font-weight: 700;
+    line-height: 80px;
+    text-transform: capitalize;
+    justify-content: end;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .main_layout_title {
+    color: black;
+    font-size: 50px;
+    margin-left: 205px;
+    text-align: center;
+    font-style: normal;
+    font-family: "Merriweather";
+    font-weight: 700;
+    line-height: 80px;
+    text-transform: capitalize;
+    justify-content: end;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 }

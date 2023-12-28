@@ -2,7 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import Image from 'next/image';
 import { footerLogo, footerDiv, footerText, CopyRight, footerHr } from '../../styles/footer'
 import { Instagram } from "@/icons/intagram";
-
+import footerlogo from "../../public/footerlogo.svg";
 const Footer = () => {
      return (
 
@@ -14,7 +14,7 @@ const Footer = () => {
                     </div>
                     <div className="col-sm-4 text-center  p-2">
                          <span >
-                              <Image className="px-5" style={footerLogo} alt="some error" width={100} height={100} src="/image4.png" />
+                              <Image style={footerLogo} alt="some error" src={footerlogo} />
                          </span>
                     </div>
                     <div className="col-sm-4">
@@ -22,7 +22,9 @@ const Footer = () => {
 
                     </div>
                     <div className="col-sm-4"></div>
-                    <div className="col-sm-4 text-center "><span className="col-6" style={footerText}>Follow the founder and send ideas and feedback</span>
+                    <div className="col-sm-4 text-center ">
+                         <span className="col-6" style={footerText}>Follow the founder and send ideas and feedback</span>
+                         <br />
                          <span className="col-6 " >
                               <Instagram />
                          </span>
