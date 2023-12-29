@@ -19,25 +19,28 @@ const ImageCard: React.FC<IImageCard> = ({ img, number, circleNumber }) => {
         style={{
           border: "1px solid #E7E7E7",
           borderRadius: "35px",
-          padding: "5px",
+          padding: "15px",
           display: "flex",
           flexDirection: "column",
-          gap: "10px",
+          gap: "20px",
           background: "white",
           marginTop: "20px",
-          width: "100%"
+          width: "100%",
         }}
       >
         <div
           style={{
             width: "100%",
             height: "464px",
-            padding: "10px",
+            padding: "20px",
             borderRadius: "30px",
             background: `url(${img})`,
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
+            backgroundPosition: "100%",
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div

@@ -2,33 +2,40 @@ import { Col, Row } from "react-bootstrap";
 import Image from "next/image";
 import folder from "../../public/folder.svg";
 import { Question } from '../../icons/question'
+import { InfoHoverIcon } from '../../icons/infoHoverIcon'
+import { ShareHoverIcon } from '../../icons/sharehovericon'
 import { Share } from '../../icons/share'
-
+import Link from "next/link";
+import { useState } from "react";
+import styles from '../../styles/style.module.css';
 interface IFolderCard {
-  folderName: string
+  folderName: string,
+  link: String
 }
-const FolderCard: React.FC<IFolderCard> = ({ folderName }) => {
+const FolderCard: React.FC<IFolderCard> = ({ folderName, link }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   return (
     <>
       <Col
+        className={`${styles.cardItemCss} `}
         style={{
-          border: "1px solid #E7E7E7",
-          borderRadius: "35px",
-          padding: "15px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px",
-          background: "#FBF7FE",
-          marginTop: "20px",
-
-          width: "361px",
-          height: "474px"
-
-
+          transition: "background-color 0.3s, color 0.3s",
+          border: isHovered ? '1px solid  rgba(115, 28, 179, 1)' : '1px solid #E7E7E7',
 
 
         }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
+
         <div
           style={{
             color: "#000",
@@ -57,8 +64,9 @@ const FolderCard: React.FC<IFolderCard> = ({ folderName }) => {
               background: "#FFF",
             }}
           >
-            <Question />
+            {isHovered ? <><InfoHoverIcon /></> : <><Question /></>}
           </div>
+
           <div
             style={{
               display: "flex",
@@ -73,38 +81,36 @@ const FolderCard: React.FC<IFolderCard> = ({ folderName }) => {
               background: "#FFF",
             }}
           >
-            <Share />
+            {isHovered ? <><ShareHoverIcon /></> : <> <Share /></>}
+
           </div>
 
+
         </div>
+        <Link href={link}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "254px",
+            }}
+          >
+            <Image src={folder} alt="GFG logo imported from public directory" />
+          </div>
+        </Link>
         <div
+          className={styles.cardItem_bootom_text}
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "254px",
-          }}
-        >
-          <Image src={folder} alt="GFG logo imported from public directory" />
-        </div>
-        <div
-          style={{
-            borderRadius: "49px",
-            background: "#EAD7FF",
-            padding: "20px",
-            display: "flex",
-            justifyContent: "center",
-            fontFamily: "Merriweather",
-            fontSize: "25px",
-            fontStyle: "normal",
-            fontWeight: 700,
-            lineHeight: "normal",
+            backgroundColor: isHovered ? 'rgba(115, 28, 179, 1)' : 'rgba(234, 215, 255, 1)',
           }}
         >
           <span
             style={{
-              color: "#A422F4", whiteSpace: "nowrap"
+              transition: "background-color 0.3s, color 0.3s",
+              color: isHovered ? 'white' : '#A422F4',
+              whiteSpace: "nowrap"
             }}
           >
             {folderName}

@@ -91,6 +91,57 @@ export const numberByList: React.CSSProperties = {
      flexShrink: 0,
 
 };
+
+
+
+
+type MediaQueries = {
+     maxWidth1550: React.CSSProperties;
+     maxWidth1900: React.CSSProperties;
+
+};
+
+const mediaQueries: MediaQueries = {
+     maxWidth1550: {
+          width: "20px",
+     },
+     maxWidth1900: {
+          width: "200px",
+     },
+
+};
+
+export const cardItemCss: React.CSSProperties = {
+     border: "1px solid #E7E7E7",
+     borderRadius: "35px",
+     padding: "15px",
+     display: "flex",
+     flexDirection: "column",
+     gap: "10px",
+     background: "#FBF7FE",
+     marginTop: "20px",
+     width: "361px", // Default width
+     height: "474px", // Default height
+     ...mediaQueries.maxWidth1550,
+     ...mediaQueries.maxWidth1900,
+};
+
+// Media queries for different viewport widths
+const customMediaQueries = `
+     @media (max-width: 1550px) {
+       width: 200px;
+     }
+     @media (max-width: 1900px) {
+       width: 300px;
+     }
+     
+   `;
+
+// Append media queries to cardItemCss
+(cardItemCss as any)[customMediaQueries] = true;
+
+
+
 export const numberByListForCard: React.CSSProperties = {
      background: "white",
      borderRadius: '100px',

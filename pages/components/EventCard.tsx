@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import styles from '../../styles/style.module.css';
 
 interface IEventCard {
   folders: any;
@@ -10,23 +11,8 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
   return (
     <>
       <Col
-        style={{
-          border: "1px solid #E7E7E7",
-          borderRadius: "35px",
-          padding: "15px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px",
-          background: "#FBF7FE",
-          marginTop: "20px",
-
-          width: "361px",
-          height: "474px"
-
-
-
-
-        }}
+        className={`${styles.cardItemCss} `}
+      // style={cardItemCss}
       >
         <div
           style={{

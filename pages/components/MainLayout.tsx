@@ -18,7 +18,7 @@ const MainLayout = () => {
   const [folders, setFolders] = useState([
     {
       folderName: "The Best",
-      url: "/components/thebest/0",
+      url: "/components/thebest/1",
     },
     {
       folderName: "Instagram",
@@ -86,7 +86,7 @@ const MainLayout = () => {
               </div>
             </Col>
             <Col lg={2} md={2} sm={4} xs={4}>
-              <div className="mt-2" style={{ justifyContent: "end", marginTop: "42px" }}>
+              <div className="m-5" style={{ justifyContent: "end", marginTop: "45px" }}>
                 <ShareAll />
               </div>
             </Col>
@@ -101,8 +101,7 @@ const MainLayout = () => {
 
           <Row className="image_cards_row">
             {selectedFiles?.map((file, index) => (
-              <Col key={index} lg={4} md={4} sm={12} xs={12}>
-
+              <Col className="m-2" key={index} lg={4} md={4} sm={12} xs={12}>
                 <ImageCard img={URL.createObjectURL(file.file)} number={index + 1} circleNumber={`${index + 1}/10`} />
               </Col>
             ))}
@@ -115,19 +114,14 @@ const MainLayout = () => {
           </Col> */}
           </Row>
         </div>
-        <Row className="cards_row">
+        <Row className="cards_row  ">
           <Col lg={3} md={3} sm={12} xs={12}>
             <EventCard folders={folders} setFolders={setFolders} />
           </Col>
           {folders &&
             folders.map((folder, index) => (
               <Col key={index} lg={3} md={3} sm={12}>
-                <Link
-                  style={{ textDecoration: "none" }}
-                  href={`/components/thebest/${index}`}
-                >
-                  <FolderCard folderName={folder.folderName} />
-                </Link>
+                <FolderCard folderName={folder.folderName} link={`${folder.url}`} />
               </Col>
             ))}
         </Row>
