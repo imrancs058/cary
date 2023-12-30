@@ -54,6 +54,20 @@ a {
   padding-left: 195px;
 }
 
+.imageDiv {
+  background-image: url('../public/logo.svg');
+  background-repeat: no-repeat;
+  width: 312px;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-position: 100%;
+  background-size: 100%;
+  margin-left: 37px;
+
+}
+
 .user_logo_div {
   display: flex;
   justify-content: end;
@@ -182,12 +196,30 @@ a {
 
 @media (max-width: 700px) {
   .navbar_row {
+    padding-left: 35px;
+    padding-right: 35px;
     align-items: center;
+    margin: 42px;
   }
 
   .image_div {
+    position: relative;
+    left: -25px;
     padding-left: 0px;
     /* width: 200px; */
+  }
+
+  .imageDiv {
+    background-image: url('../public/logoreponsive.svg');
+    background-repeat: no-repeat;
+    width: 312px;
+    height: 84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: 100%;
+    background-size: 100%;
+
   }
 
   .user_name {
@@ -311,31 +343,15 @@ a {
 }
 
 
-
-.dropdown-menu.show::before {
-  content: '˄';
-  position: absolute;
-  width: 15px;
-  height: 10px;
-  top: -23.2px;
-  left: 83%;
-  margin-left: -9px;
-  color: rgba(202, 191, 210, 1);
-  background-color: white
-}
-
-
-
-
-
-
 .dropdown-item:hover {
-  background-color: white;
+  background-color: transparent !important;
 
 }
 
 .dropdown-item {
   font-weight: 500 !important;
+  position: relative;
+  top: -38px;
 }
 
 .event-item-card {
@@ -351,25 +367,102 @@ a {
   height: "474px"
 }
 
+.heading-text {
+  background: rgba(245, 236, 252, 0.44);
+  padding: 100px;
+  position: relative;
+  top: -30px;
+  left: 10px;
+}
+
+/* .br-class:after {
+  content: "\a";
+  white-space: pre;
+} */
 
 @media only screen and (max-width: 767px) {
   .main_layout_title {
     color: black;
-    font-size: 32px;
-    margin-left: 205px;
-    text-align: center;
-    font-style: normal;
+    font-size: 18px;
+    margin-left: 70px;
+
     font-family: "Merriweather";
     font-weight: 700;
-    line-height: 80px;
+    line-height: 30px;
     text-transform: capitalize;
-    justify-content: end;
+    /* justify-content: end;
     margin-top: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 40px; */
   }
 }
 
 /* Medium Screens (Tablets): */
+
+@media only screen and (max-width: 430px) {
+  .main_layout_title {
+    color: black;
+    font-size: 18px;
+    margin-left: 0;
+    text-align: left;
+    font-style: normal;
+    font-family: "Merriweather";
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: capitalize;
+    padding-left: 25px
+      /* justify-content: end;
+    margin-top: 30px;
+    margin-bottom: 40px; */
+  }
+
+  .image_uploader_div_2 {
+    width: 215px;
+    height: 22px;
+    top: 321px;
+    left: 89px;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+  }
+
+
+  .user_logo_div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+    padding-right: 70px;
+    margin-top: 22px;
+    padding-right: 7px;
+    margin-top: -1px;
+
+  }
+
+  .navbar_row {
+    padding-left: 35px;
+    padding-right: 35px;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .heading-text {
+    background: rgba(245, 236, 252, 0.44);
+    padding: 10px;
+    position: relative;
+    top: -30px;
+    left: 10px;
+  }
+
+  .br-class:after {
+    content: "\a";
+    white-space: pre;
+  }
+}
 
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {

@@ -13,6 +13,7 @@ export interface IBinaryFile {
   status: string;
   id: string;
 }
+import ShareLink from './ShareLink'
 const MainLayout = () => {
   const [isUploadedFiles, setIsUploadedFiles] = useState(true);
   const [folders, setFolders] = useState([
@@ -71,23 +72,23 @@ const MainLayout = () => {
   return (
     <div className="bg-white p-4">
       <Col >
-        <div className="row " style={{
-          background: "rgba(245, 236, 252, 0.44)",
-          padding: '100px',
-          position: 'relative',
-          top: '-30px',
-          left: '10px'
-        }}>
+        <div className="row heading-text" >
           <Row className="main_layout_title_row">
             <Col lg={10} md={10} sm={8} xs={8}>
-              <div className="main_layout_title text-center">
-                I choose the best style and the hottest photo <br /> based on psychology
+              <div className="main_layout_title">
+                <span className="br-class br-class-split">I choose the best style and</span><span className="br-class"> the hottest photo based on</span>psychology
                 and science.
               </div>
             </Col>
             <Col lg={2} md={2} sm={4} xs={4}>
               <div className="m-5" style={{ justifyContent: "end", marginTop: "45px" }}>
-                <ShareAll />
+                {/* <ShareAll /> */}
+                <ShareLink
+                  to={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/brands`}
+                  fontSize={"28px"}
+                  title="A Real Glam | Brands"
+                  description="Explore our curated selection of popular and emerging brands known for their exceptional products. Discover your next favorite brand with A Real Glam today."
+                  image="https://admin.arealglam.com/website/images/1700661144.png" />
               </div>
             </Col>
           </Row>

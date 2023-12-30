@@ -1,0 +1,73 @@
+.customDropdown {
+     background-color: transparent !important;
+     color: black;
+     border: none
+}
+
+.dropdownMenu.show {
+     border-radius: 20px !important;
+     position: absolute !important;
+     left: -107px !important;
+     top: 15px !important;
+     background-color: red;
+     color: red;
+
+}
+
+.customDropdown:hover {
+     background-color: transparent;
+     color: black;
+     border: none
+}
+
+.customDropdown::after {
+     content: none !important;
+}
+
+/* Style for the custom SVG icon */
+.custom-svg-icon {
+     width: 20px;
+     /* Adjust the icon width */
+     height: auto;
+     /* Maintain aspect ratio */
+}
+
+.dropdownMenu {
+     width: 215px !important;
+     height: 300px !important;
+     font-size: 18px;
+     font-weight: 500;
+     line-height: 35px;
+     letter-spacing: 0em;
+     position: relative !important;
+     left: -10px !important;
+}
+
+.dropDownIconCss {
+     border: 1px solid transparent;
+     border-radius: 50px;
+     width: 37px;
+     height: 37px;
+     margin: 5px
+}
+
+.dropdown-menu.show {
+     border-radius: 20px !important;
+     position: absolute !important;
+
+     /* overflow: hidden !important; */
+
+}
+
+
+.dropdown-item:hover {
+     background-color: transparent !important;
+
+}
+
+.dropdownitem {
+     font-weight: 500 !important;
+     position: relative !important;
+     top: -38px;
+     left: 105px !important;
+}
