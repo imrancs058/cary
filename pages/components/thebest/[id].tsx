@@ -1,7 +1,7 @@
 import { Col, Row } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 import Image from 'next/image';
-import { card, numberList, headingText, glassyBackground, cardParagraph, numberByList } from '../../../styles/thebest';
+import { card, numberList, glassyBackground, cardParagraph, numberByList } from '../../../styles/thebest';
 import { Share } from '@/icons/share';
 import { Off } from '@/icons/collapsoff';
 import { On } from "@/icons/collapson";
