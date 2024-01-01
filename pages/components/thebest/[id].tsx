@@ -12,10 +12,23 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import ShareLink from "../ShareLink";
 import style from '../../../styles/sharelink.module.css'
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 
 const CardItem = ({ number, content, imageUrl }: any) => {
-     const [isContentVisible, setIsContentVisible] = useState(false);
+     const items = Array.from({ length: 20 }).map((_, index) => (
+          <div
+               key={index}
+               style={{
+                    height: index % 2 ? "200px" : "250px",
+                    background: "#" + Math.floor(Math.random() * 16777215).toString(16),
+                    margin: "10px",
+                    // padding: "20px",
 
+                    borderRadius: "8px"
+               }}
+          />
+     ));
+     const [isContentVisible, setIsContentVisible] = useState(false);
      const toggleContent = () => {
           setIsContentVisible(!isContentVisible);
      };
@@ -33,44 +46,51 @@ const CardItem = ({ number, content, imageUrl }: any) => {
           transition: 'opacity 0.3s ease', // Apply transition to opacity only
      };
      return (
-          <Col sm={4} className="mb-2 p-3">
-               <div className={`shadow p-2 ${style.card}`}>
-                    <Link style={{ textDecoration: 'none' }} href="thebestcard/[id]" as="thebestcard/1">
-                         <div style={cardImageDiv}>
-                              <div className="row">
-                                   <div className="col-6">
-                                        <span style={numberList}>{number}/9</span>
-                                   </div>
-                                   <div className="col-6">
-                                        <span className={`${style.glassyBackground} float-right font-weight-bold`} >
-                                             <Share />
-                                        </span>
-                                   </div>
-                                   <div className="col-12">
-                                        <span style={numberByList}>{number}/{number}</span>
-                                   </div>
+
+
+          <div style={{
+               gap: "20px",
+               margin: 10,
+               maxHeight: isContentVisible ? "800px" : "500px",
+               transition: "max-height 0.3s ease, transform 0.3s ease", // Add transform to enable hardware acceleration
+
+               transform: "translateZ(0)",
+          }} className={`shadow p-2 ${style.card}`}>
+               <Link style={{ textDecoration: 'none' }} href="thebestcard/[id]" as="thebestcard/1">
+                    <div style={cardImageDiv}>
+                         <div className="row">
+                              <div className="col-6">
+                                   <span style={numberList}>{number}/9</span>
+                              </div>
+                              <div className="col-6">
+                                   <span className={`${style.glassyBackground} float-right font-weight-bold`} >
+                                        <Share />
+                                   </span>
+                              </div>
+                              <div className="col-12">
+                                   <span style={numberByList}>{number}/{number}</span>
                               </div>
                          </div>
-                    </Link>
-                    <span>
-                         <span className="d-flex">
-                              <p style={cardParagraph}>{content}</p>{" "}
-                              <span className="mt-3" onClick={toggleContent}>
-                                   {isContentVisible ? <Off /> : <On />}
-                              </span>
+                    </div>
+               </Link>
+               <span>
+                    <span className="d-flex">
+                         <p style={cardParagraph}>{content}</p>{" "}
+                         <span className="mt-3" onClick={toggleContent}>
+                              {isContentVisible ? <Off /> : <On />}
                          </span>
                     </span>
-                    {isContentVisible && (
-                         <ul style={{ transition: "opacity 0.3s ease 0 0.3s ease" }}>
-                              <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
-                              <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
-                              <li>uisque vehicula malesuada auctor. Ut pulvinar odio lectus, eget consequat arcu dignissim quis. Aenean dignissim.</li>
-                         </ul>
-                    )}
+               </span>
+               {isContentVisible && (
+                    <ul style={{ opacity: isContentVisible ? 1 : 0 }}>
+                         <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
+                         <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
+                         <li>uisque vehicula malesuada auctor. Ut pulvinar odio lectus, eget consequat arcu dignissim quis. Aenean dignissim.</li>
+                    </ul>
+               )}
 
-               </div>
+          </div>
 
-          </Col>
      );
 };
 
@@ -149,11 +169,27 @@ const Thebest = () => {
                          image="https://admin.arealglam.com/website/images/1700661144.png" /></div>
                </div >
 
-               {id && index && cardItems[Number(id)] ? <Row className="p-3 m-4">
-                    {cardItems[index].map((item, index) => (
-                         <CardItem key={index} {...item} imageUrl={item.imageUrl} />
-                    ))}
-               </Row> : null}
+               {id && index && cardItems[Number(id)] ?
+
+                    <ResponsiveMasonry
+                         className="margin-card"
+                         columnsCountBreakPoints={{ 350: 1, 750: 2, 1200: 3 }}
+                         style={{
+                              gap: "20px"
+                         }}
+
+                    >
+                         <Masonry style={{
+                              gap: "20px"
+
+                         }}>
+
+                              {cardItems[index].map((item, index) => (
+                                   <CardItem key={index} {...item} imageUrl={item.imageUrl} />
+                              ))}
+                         </Masonry>
+                    </ResponsiveMasonry>
+                    : null}
 
                <Footer />
           </>

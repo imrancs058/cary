@@ -364,6 +364,12 @@ a {
   content: none !important;
 }
 
+.margin-card {
+  margin: 0 150px;
+}
+
+
+
 /* Style for the custom SVG icon */
 .custom-svg-icon {
   width: 20px;
@@ -430,6 +436,10 @@ a {
 } */
 
 @media only screen and (max-width: 767px) {
+  .margin-card {
+    margin: 0 50px;
+  }
+
   .main_layout_title {
     color: black;
     font-size: 18px;
@@ -458,6 +468,10 @@ a {
     /* overflow: hidden !important; */
     box-shadow: 9px 35px 35px rgba(122, 119, 137, 0.44);
 
+  }
+
+  .margin-card {
+    margin: 0 0;
   }
 
   .main_layout_title {
