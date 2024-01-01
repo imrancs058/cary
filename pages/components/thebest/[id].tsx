@@ -11,6 +11,7 @@ import Footer from "../Footer";
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import ShareLink from "../ShareLink";
+import style from '../../../styles/sharelink.module.css'
 
 const CardItem = ({ number, content, imageUrl }: any) => {
      const [isContentVisible, setIsContentVisible] = useState(false);
@@ -33,7 +34,7 @@ const CardItem = ({ number, content, imageUrl }: any) => {
      };
      return (
           <Col sm={4} className="mb-2 p-3">
-               <div style={card} className="shadow p-2">
+               <div className={`shadow p-2 ${style.card}`}>
                     <Link style={{ textDecoration: 'none' }} href="thebestcard/[id]" as="thebestcard/1">
                          <div style={cardImageDiv}>
                               <div className="row">
@@ -41,7 +42,7 @@ const CardItem = ({ number, content, imageUrl }: any) => {
                                         <span style={numberList}>{number}/9</span>
                                    </div>
                                    <div className="col-6">
-                                        <span className="float-right font-weight-bold" style={glassyBackground}>
+                                        <span className={`${style.glassyBackground} float-right font-weight-bold`} >
                                              <Share />
                                         </span>
                                    </div>

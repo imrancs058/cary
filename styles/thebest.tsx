@@ -1,7 +1,7 @@
 
 
 export const card: React.CSSProperties = {
-     borderRadius: '30px',
+     borderRadius: '48px',
      cursor: "pointer",
 };
 export const cardForCard: React.CSSProperties = {
