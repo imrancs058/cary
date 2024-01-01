@@ -10,18 +10,18 @@ import { useState } from "react";
 import styles from '../../styles/style.module.css';
 interface IFolderCard {
   folderName: string,
-  link: String
+  link: string
 }
 const FolderCard = ({ folderName, link }: any) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
   return (
     <>
       <Col
@@ -32,8 +32,8 @@ const FolderCard = ({ folderName, link }: any) => {
 
 
         }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
       >
 
         <div
@@ -87,7 +87,7 @@ const FolderCard = ({ folderName, link }: any) => {
 
 
         </div>
-        <Link href={link}>
+        <Link href={`${link}`}>
           <div
             style={{
               display: "flex",
@@ -116,7 +116,7 @@ const FolderCard = ({ folderName, link }: any) => {
             {folderName}
           </span>
         </div>
-      </Col>
+      </Col >
     </>
   );
 };
