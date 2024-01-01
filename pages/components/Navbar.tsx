@@ -22,23 +22,44 @@ const NavBar = () => {
     //   document.removeEventListener('click', handlePageClick);
     // };
   }, [state]);
+  function toggleOptions() {
+    var options: any = document.getElementById('options');
+    options.style.display = (options.style.display === 'block') ? 'none' : 'block';
+  }
   return (
     <>
+
+
       <Row className="bg-white navbar_row">
         <Col className="menu_col" lg={0} md={0} sm={4} xs={2}>
           <div>
-            <Menu />
+
+            <div className="icon-container" onClick={() => toggleOptions()}>
+
+              <Menu />
+
+
+              <div className="options" id="options">
+
+                <div>Follow on Instagram</div>
+                <div>Log out</div>
+
+              </div>
+            </div>
           </div>
         </Col>
         <Col lg={6} md={6} sm={4} xs={8}>
           <div className="image_div">
-            <div className="imageDiv"></div>
+
+            <span className="imageDiv"></span>
             {/* <Image src={logo} alt="GFG logo imported from public directory" /> */}
           </div>
         </Col>
+
         <Col lg={5} md={5} sm={4} xs={2}>
           <div className="user_logo_div">
-            <Image width={30} height={30} src={user} alt="user_logo" />
+
+            <div className="User-image"></div>
             <div className="user_name">
               <DropDown propState={setState} propVal={state} />
 

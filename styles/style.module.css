@@ -59,7 +59,7 @@
           width: 361px;
           height: 474px;
           margin-left: 34px;
-          margin-top: 40px;
+          margin-top: 25px;
 
      }
 
@@ -74,7 +74,11 @@
           font-weight: 700;
           line-height: normal;
           transition: background-color 0.3s, color 0.3s;
-          margin-top: 61px;
+          margin-top: 50px;
+          width: 362px;
+          height: 95px;
+          position: relative;
+          left: -16px
      }
 }
 
@@ -132,6 +136,7 @@
      }
 
 }
+
 
 @media only screen and (min-width: 1900px) {
      .cardItemCss {

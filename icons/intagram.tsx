@@ -2,10 +2,10 @@
 
 export const Instagram = () => {
      return (
-          <svg width="138" height="44" viewBox="0 0 138 44" fill="none" className="mt-2  " style={{
+          <svg width="138" height="44" viewBox="0 0 138 44" fill="none" className="mt-4  " style={{
                cursor: "pointer",
                position: 'relative',
-               left: "1.5rem"
+               left: "0.8rem"
 
           }} xmlns="http://www.w3.org/2000/svg">
                <rect x="0.5" width="137" height="44" rx="22" fill="white" />

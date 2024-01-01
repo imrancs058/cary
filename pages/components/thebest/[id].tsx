@@ -10,6 +10,7 @@ import NavBar from "../Navbar";
 import Footer from "../Footer";
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import ShareLink from "../ShareLink";
 
 const CardItem = ({ number, content, imageUrl }: any) => {
      const [isContentVisible, setIsContentVisible] = useState(false);
@@ -25,6 +26,10 @@ const CardItem = ({ number, content, imageUrl }: any) => {
           height: "18rem",
           marginTop: '0.2rem',
           borderRadius: "10px",
+     };
+     const listStyles = {
+          opacity: isContentVisible ? 1 : 0, // Change opacity based on visibility
+          transition: 'opacity 0.3s ease', // Apply transition to opacity only
      };
      return (
           <Col sm={4} className="mb-2 p-3">
@@ -55,7 +60,7 @@ const CardItem = ({ number, content, imageUrl }: any) => {
                          </span>
                     </span>
                     {isContentVisible && (
-                         <ul>
+                         <ul style={{ transition: "opacity 0.3s ease 0 0.3s ease" }}>
                               <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
                               <li>Sed iaculis lorem nec massa suscipit, at viverra turpis lacinia.</li>
                               <li>uisque vehicula malesuada auctor. Ut pulvinar odio lectus, eget consequat arcu dignissim quis. Aenean dignissim.</li>
@@ -132,13 +137,18 @@ const Thebest = () => {
      return (
           <>
                <NavBar />
-               <div className="row mt-4 p-5">
+               <div className="row mt-4 p-5 m-5">
 
                     <div className="col-10"><span style={headingText}> The Best</span></div>
-                    <div className="col-2 mt-"><ShareAll /></div>
+                    <div className="col-2 mt-"> <ShareLink
+                         to={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/brands`}
+                         fontSize={"28px"}
+                         title="A Real Glam | Brands"
+                         description="Explore our curated selection of popular and emerging brands known for their exceptional products. Discover your next favorite brand with A Real Glam today."
+                         image="https://admin.arealglam.com/website/images/1700661144.png" /></div>
                </div >
 
-               {id && index && cardItems[Number(id)] ? <Row className="p-3">
+               {id && index && cardItems[Number(id)] ? <Row className="p-3 m-4">
                     {cardItems[index].map((item, index) => (
                          <CardItem key={index} {...item} imageUrl={item.imageUrl} />
                     ))}

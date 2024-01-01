@@ -76,7 +76,7 @@ const MainLayout = () => {
           <Row className="main_layout_title_row">
             <Col lg={10} md={10} sm={8} xs={8}>
               <div className="main_layout_title">
-                <span className="br-class br-class-split">I choose the best style and</span><span className="br-class"> the hottest photo based on</span>psychology
+                <span className="br-class br-class-split">I choose the best style and</span><span className="br-class"> the hottest photo based on</span> psychology
                 and science.
               </div>
             </Col>

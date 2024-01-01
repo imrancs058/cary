@@ -1,0 +1,63 @@
+.footer_Text {
+     font-family: Satoshi;
+     font-size: 1.1rem;
+     font-weight: 500;
+     line-height: 0.1rem;
+     letter-spacing: 0em;
+     position: relative;
+     text-align: center;
+     color: #FFFFFF;
+     left: 1.1rem;
+     word-wrap: break-word;
+     overflow-wrap: break-word;
+}
+
+.footer_Text_Hr_left {
+     visibility: hidden;
+}
+
+.footer_Text_Hr_right {
+     visibility: hidden;
+}
+
+.bottom_text {
+     font-family: Satoshi;
+     font-size: 1rem;
+     font-weight: 300;
+     line-height: 0.5rem;
+     letter-spacing: 0em;
+     color: #FFFFFF
+}
+
+@media only screen and (max-width: 430px) {
+
+     .footer_Text_Hr_left {
+          visibility: visible;
+          color: white;
+          margin-left: 6rem;
+          position: relative;
+          left: 29px;
+
+     }
+
+     .bottom_text {
+          visibility: hidden;
+     }
+
+     .footer_Text_Hr_right {
+          visibility: visible;
+          color: white;
+          margin-right: 6rem;
+          position: relative;
+          left: 5px;
+
+     }
+
+     .footer_Text {
+          font-family: inherit;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 24px;
+     }
+
+}
