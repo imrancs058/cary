@@ -1,11 +1,11 @@
 import { Dropdown } from "react-bootstrap";
 import React, { useState } from 'react'
 
-export interface File {
+export interface States {
   propState: string,
-  propVal: String
+  propVal: string
 }
-const DropDown = ({ propState, propVal }: File) => {
+const DropDown = ({ propState = "", propVal }: any) => {
 
   return (
 

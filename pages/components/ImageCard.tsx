@@ -8,7 +8,7 @@ interface IImageCard {
   title?: string;
   description?: string;
 }
-const ImageCard: React.FC<IImageCard> = ({ img, number, circleNumber }) => {
+const ImageCard = ({ img, number, circleNumber }: any) => {
   return (
     <>
       <Col

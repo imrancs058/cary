@@ -12,7 +12,7 @@ interface IFolderCard {
   folderName: string,
   link: String
 }
-const FolderCard: React.FC<IFolderCard> = ({ folderName, link }) => {
+const FolderCard: React.FC<IFolderCard> = ({ folderName, link }: any) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {

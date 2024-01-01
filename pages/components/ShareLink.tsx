@@ -20,7 +20,7 @@ import {
 import { Dropdown } from "react-bootstrap";
 
 
-export default function ShareLink({ to, rounded, title, description, image }) {
+export default function ShareLink({ to, rounded, title, description, image }: any) {
      const isMobile = useMediaQuery({ maxWidth: 768 });
      // const url = window.location.href;
      // eslint-disable-next-line no-unused-vars
@@ -101,7 +101,7 @@ export default function ShareLink({ to, rounded, title, description, image }) {
           <div className="relative  top-0 bottom-0 right-0 left-0  ">
 
 
-               <Dropdown drop="top" onClick={() => { setState(!state) }}>
+               <Dropdown onClick={() => { setState(!state) }}>
 
                     <Dropdown.Toggle variant="secondary" className={style.customDropdown}>
                          <ShareAll />
