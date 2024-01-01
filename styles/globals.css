@@ -453,7 +453,7 @@ a {
   .dropdown-menu.show {
     border-radius: 20px !important;
     position: absolute !important;
-    left: 235px !important;
+    left: -40px !important;
     top: 15px !important;
     /* overflow: hidden !important; */
     box-shadow: 9px 35px 35px rgba(122, 119, 137, 0.44);

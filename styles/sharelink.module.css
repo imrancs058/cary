@@ -94,6 +94,77 @@
      cursor: pointer,
 }
 
+.card_mage_div {
+     width: 100%;
+     height: 30rem;
+     background-size: 100% !important;
+     background-repeat: no-repeat !important;
+     margin-top: 0.2rem !important;
+     border-radius: 32px !important
+}
+
+.numberByListForCard {
+     background: white;
+     border-radius: 100px;
+     padding: 18px;
+     position: relative;
+     top: 23rem;
+     margin: 1.5rem;
+     color: #000;
+     font-style: normal;
+     font-size: 15px;
+     font-weight: 600;
+     line-height: normal;
+     flex-shrink: 0,
+}
+
+.cardParagraphForCard {
+
+     font-size: 45px;
+     font-weight: 700;
+     letter-spacing: 0em;
+     text-align: left;
+     line-height: 57px;
+}
+
+.numberListForCard {
+
+     position: relative;
+     top: -20px;
+     padding: 25px
+}
+
+.numberListForCard li {
+     font-size: 22px;
+     font-weight: 400;
+     letter-spacing: 0em;
+     line-height: 35px;
+}
+
+.cardForCard {
+     width: 75%;
+     height: 100%;
+     border-radius: 40px;
+     cursor: pointer;
+     padding: 15px;
+     margin: 2% 13%;
+     box-shadow: 0px 0px 5px rgba(231, 230, 234, 1);
+     margin-bottom: 120px
+}
+
+.headingText {
+     color: #000;
+     font-family: Merriweather;
+     font-size: 50px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: 80px;
+     position: relative;
+     left: 70px;
+
+}
+
+
 
 @media only screen and (min-width: 1200px) {
      .glassyBackground {
@@ -138,6 +209,35 @@
           cursor: pointer,
      }
 
+     .cardForCard {
+          width: 108%;
+          height: 100%;
+          border-radius: 0px;
+          cursor: pointer;
+          box-shadow: none;
+          position: relative;
+          left: -74px
+     }
+
+     .cardParagraphForCard {
+          font-family: satoshi;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 0em;
+          text-align: left;
+          line-height: 35px;
+          padding: 10px
+     }
+
+     .numberListForCard li {
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0em;
+          line-height: 30px;
+          margin: 15px;
+          padding: 5px
+     }
+
      .glassyBackground {
           background: rgba(255, 255, 255, 0.57);
           backdrop-filter: blur(20px);
@@ -152,5 +252,47 @@
           font-size: 15px;
           font-weight: 600;
           line-height: normal;
+     }
+
+     .numberByListForCard {
+          background: white;
+          border-radius: 100px;
+          padding: 18px;
+          position: relative;
+          top: 22rem;
+          margin: 1.5rem;
+          color: #000;
+          font-style: normal;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: normal;
+          flex-shrink: 0,
+     }
+
+
+
+
+
+
+     .card_mage_div {
+          width: 100%;
+          height: 26rem;
+          background-size: 110% !important;
+          background-repeat: no-repeat !important;
+          margin-top: 0.2rem !important;
+          border-radius: 0px !important
+     }
+
+
+     .headingText {
+          color: #000;
+          font-family: Merriweather;
+          font-size: 35px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 80px;
+          position: relative;
+          left: -17px;
+
      }
 }

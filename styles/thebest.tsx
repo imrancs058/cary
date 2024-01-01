@@ -4,14 +4,7 @@ export const card: React.CSSProperties = {
      borderRadius: '48px',
      cursor: "pointer",
 };
-export const cardForCard: React.CSSProperties = {
-     width: '75%',
-     height: '100%',
-     borderRadius: '40px',
-     cursor: "pointer",
-     padding: '15px',
-     margin: '2% 10%'
-};
+
 export const cardImageDiv: React.CSSProperties = {
      background: 'url("/image1.png")', // Adjust the path based on your project structure
      backgroundSize: '100%',
@@ -68,12 +61,7 @@ export const numberList: React.CSSProperties = {
 
 
 
-export const numberListForCard: React.CSSProperties = {
 
-     position: 'relative',
-     top: '-20px',
-     padding: "25px"
-};
 
 export const numberByList: React.CSSProperties = {
      background: "white",
@@ -160,15 +148,7 @@ export const numberByListForCard: React.CSSProperties = {
 };
 
 
-export const headingText: React.CSSProperties = {
-     color: "#000",
-     fontFamily: "Merriweather",
-     fontSize: "25px",
-     fontStyle: "normal",
-     fontWeight: 700,
-     lineHeight: "39px", /* 169.565% */
-     // textTransform: "capitalize",
-};
+
 
 
 

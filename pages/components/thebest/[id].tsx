@@ -140,7 +140,7 @@ const Thebest = () => {
                <NavBar />
                <div className="row mt-4 p-5 m-5">
 
-                    <div className="col-10"><span style={headingText}> The Best</span></div>
+                    <div className="col-10"><span className={`${style.headingText}`}> The Best</span></div>
                     <div className="col-2 mt-"> <ShareLink
                          to={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/brands`}
                          fontSize={"28px"}
