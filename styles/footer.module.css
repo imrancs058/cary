@@ -28,9 +28,29 @@
      letter-spacing: 0em;
      color: #FFFFFF
 }
+.box_shadow{
+   position: absolute;
+   top: -65px;
+   border-radius: 600px;
+   border: 6px solid #FAF8FC;
+   background: #FFF;
+   display: inline-flex;
+   padding: 0px 43px;
+   flex-direction: column;
+   align-items: flex-start;
+   left: 50%;
+   transform: translateX(-50%);
+}
 
 @media only screen and (max-width: 430px) {
-
+     .box_shadow svg{
+          width: 200px;
+          height: 100px;
+        }
+     .box_shadow{
+          padding: 0px 43px;
+          margin-left: -11px;
+        }
      .footer_Text_Hr_left {
           visibility: visible;
           color: white;
