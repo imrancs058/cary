@@ -1,7 +1,3 @@
-import { Col, Row } from "react-bootstrap";
-import Image from "next/image";
-import { card, numberByListForCard, cardParagraphForCard, cardImageDivForCard, glassyBackground, cardParagraph, numberByList, customCard, customContent, customContentShow } from '../../../../styles/thebest';
-import { ShareAll } from "@/icons/shareall";
 import NavBar from "../../Navbar";
 import Footer from "../../Footer";
 import { useRouter } from 'next/router';

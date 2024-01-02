@@ -15,13 +15,13 @@ interface IFolderCard {
 const FolderCard = ({ folderName, link }: any) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  // const handleMouseEnter = () => {
-  //   setIsHovered(true);
-  // };
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
 
-  // const handleMouseLeave = () => {
-  //   setIsHovered(false);
-  // };
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   return (
     <>
       <Col
@@ -32,8 +32,8 @@ const FolderCard = ({ folderName, link }: any) => {
 
 
         }}
-      // onMouseEnter={handleMouseEnter}
-      // onMouseLeave={handleMouseLeave}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
 
         <div

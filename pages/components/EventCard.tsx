@@ -78,14 +78,19 @@ const EventCard: React.FC<IEventCard> = ({ folders, setFolders }) => {
 
 
             }}
-            onClick={() =>
-              setFolders((prev: any) => [
-                ...prev,
-                {
-                  folderName: folderName,
-                  url: "/components/Thebest",
-                },
-              ])
+            onClick={() => {
+              if (folderName) {
+                setFolders((prev: any) => [
+                  ...prev,
+                  {
+                    folderName: folderName,
+                    url: `/components/Thebest/${folders.length}`,
+                  },
+                ])
+              }
+            }
+
+
             }
           >
             Create your folder

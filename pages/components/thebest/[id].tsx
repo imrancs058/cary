@@ -52,10 +52,12 @@ const CardItem = ({ number, content, imageUrl }: any) => {
                gap: "20px",
                margin: 10,
                maxHeight: isContentVisible ? "800px" : "500px",
-               transition: "max-height 0.3s ease, transform 0.3s ease", // Add transform to enable hardware acceleration
-
                transform: "translateZ(0)",
-          }} className={`shadow p-2 ${style.card}`}>
+               border: isContentVisible ? "0px solid #E7E7E7" : "1px solid #E7E7E7",
+               boxShadow: isContentVisible ? '0 0.5rem 1rem rgba(0, 0, 0, 0.15)' : "0 0.5rem 1rem white",
+               transition: "max-height 1s ease, transform 1s ease, box-shadow 0.3s ease",// Add transform to enable hardware acceleration
+
+          }} className={` p-2 ${style.card}`}>
                <Link style={{ textDecoration: 'none' }} href="thebestcard/[id]" as="thebestcard/1">
                     <div style={cardImageDiv}>
                          <div className="row">
@@ -161,17 +163,18 @@ const Thebest = () => {
                <div className="row mt-4 p-5 m-5">
 
                     <div className="col-10"><span className={`${style.headingText}`}> The Best</span></div>
-                    <div className="col-2 mt-"> <ShareLink
-                         to={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/brands`}
-                         fontSize={"28px"}
-                         title="A Real Glam | Brands"
-                         description="Explore our curated selection of popular and emerging brands known for their exceptional products. Discover your next favorite brand with A Real Glam today."
-                         image="https://admin.arealglam.com/website/images/1700661144.png" /></div>
+                    <div className="col-2 mt-">
+                         <ShareLink
+                              to={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/brands`}
+                              fontSize={"28px"}
+                              title="A Real Glam | Brands"
+                              description="Explore our curated selection of popular and emerging brands known for their exceptional products. Discover your next favorite brand with A Real Glam today."
+                              image="https://admin.arealglam.com/website/images/1700661144.png" /></div>
                </div >
 
-               {id && index && cardItems[Number(id)] ?
+               {id ?
 
-                    <ResponsiveMasonry
+                    <> <ResponsiveMasonry
                          className="margin-card"
                          columnsCountBreakPoints={{ 350: 1, 750: 2, 1200: 3 }}
                          style={{
@@ -184,14 +187,16 @@ const Thebest = () => {
 
                          }}>
 
-                              {cardItems[index].map((item, index) => (
+                              {cardItems[isNaN(index) ? 1 : index].map((item, index) => (
                                    <CardItem key={index} {...item} imageUrl={item.imageUrl} />
                               ))}
                          </Masonry>
                     </ResponsiveMasonry>
+                         <Footer />
+                    </>
                     : null}
 
-               <Footer />
+
           </>
      );
 };

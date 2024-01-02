@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-
+import styles from '../../styles/style.module.css';
 interface IImageCard {
   number: number;
   circleNumber: string;
@@ -44,28 +44,11 @@ const ImageCard = ({ img, number, circleNumber }: any) => {
           }}
         >
           <div
-            style={{
-              borderRadius: "600px",
-              background: "rgba(255, 255, 255, 0.37)",
-              backdropFilter: "blur(5px)",
-              width: "90px",
-              height: "90px",
-              flexShrink: 0,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+
+            className={styles.image_card_div}
           >
             <span
-              style={{
-                color: "#FFF",
-
-                fontFamily: "Satoshi",
-                fontSize: "30px",
-                fontStyle: "normal",
-                fontWeight: 900,
-                lineHeight: "normal",
-              }}
+              className={styles.image_card_number}
             >
               {number}
             </span>

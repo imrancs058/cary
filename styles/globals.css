@@ -191,6 +191,19 @@ a {
   margin-left: 20px;
 }
 
+.image_uploader_div_1 {
+  color: black;
+  /* font-family: Satoshi; */
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 650;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+
 .image_uploader_div_3 {
   color: black;
   font-family: "Satoshi";
@@ -422,7 +435,7 @@ a {
   height: "474px"
 }
 
-.heading-text {
+.heading-row {
   background: rgba(245, 236, 252, 0.44);
   padding: 100px;
   position: relative;
@@ -430,10 +443,7 @@ a {
   left: 10px;
 }
 
-/* .br-class:after {
-  content: "\a";
-  white-space: pre;
-} */
+
 
 @media only screen and (max-width: 767px) {
   .margin-card {
@@ -469,6 +479,38 @@ a {
     box-shadow: 9px 35px 35px rgba(122, 119, 137, 0.44);
 
   }
+
+  . .heading-row {
+    background: rgba(245, 236, 252, 0.44);
+    padding: 10px;
+    position: relative;
+    top: -30px;
+    left: 10px;
+  }
+
+  .image_uploader_main_div_files {
+    background: rgba(255, 255, 255, 1);
+    border: 3px dashed #9d22eb;
+    height: 209px;
+    width: 80%;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 13px;
+  }
+
+  .heading-row {
+    background: rgba(245, 236, 252, 0.44);
+    padding: 10px;
+    position: relative;
+    top: -30px;
+    left: 0px;
+  }
+
 
   .margin-card {
     margin: 0 0;
@@ -511,8 +553,25 @@ a {
   .image_uploader_div_2 {
     width: 215px;
     height: 22px;
-    top: 321px;
-    left: 89px;
+    position: relative;
+    top: 11px;
+    left: 48px;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+  }
+
+  .image_uploader_div_1 {
+    width: 215px;
+    height: 22px;
+    position: relative;
+    top: 11px;
+    left: 7px;
     font-family: Satoshi;
     font-size: 16px;
     font-weight: 700;
@@ -559,13 +618,6 @@ a {
     margin: 20px;
   }
 
-  .heading-text {
-    background: rgba(245, 236, 252, 0.44);
-    padding: 10px;
-    position: relative;
-    top: -30px;
-    left: 10px;
-  }
 
   .br-class:after {
     content: "\a";

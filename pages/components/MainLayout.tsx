@@ -72,7 +72,7 @@ const MainLayout = () => {
   return (
     <div className="bg-white p-4">
       <Col >
-        <div className="row heading-text" >
+        <div className="row heading-row" >
           <Row className="main_layout_title_row">
             <Col lg={10} md={10} sm={8} xs={8}>
               <div className="main_layout_title">
@@ -103,16 +103,9 @@ const MainLayout = () => {
           <Row className="image_cards_row">
             {selectedFiles?.map((file, index) => (
               <Col className="m-2" key={index} lg={4} md={4} sm={12} xs={12}>
-                <ImageCard img={URL.createObjectURL(file.file)} number={index + 1} circleNumber={`${index + 1}/10`} />
+                <ImageCard img={URL.createObjectURL(file.file)} number={index + 1} circleNumber={`${index + 1}/${selectedFiles.length}`} />
               </Col>
             ))}
-
-            {/* <Col lg={4} md={4} sm={12} xs={12}>
-            <ImageCard number={2} circleNumber="7/10" />
-          </Col>
-          <Col lg={4} md={4} sm={12} xs={12}>
-            <ImageCard number={3} circleNumber="3/10" />
-          </Col> */}
           </Row>
         </div>
         <Row className="cards_row  ">

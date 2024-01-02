@@ -79,7 +79,7 @@ const ImageUploader: React.FC<IImageUploader> = ({ isUploadedFiles, selectedFile
         </div>
       )}
       {!isUploadedFiles ? (
-        <div className="image_uploader_div_2">Upload High Quality pictures</div>
+        <div className="image_uploader_div_1">Upload High Quality pictures</div>
       ) : (
         <div className="image_uploader_div_2">Upload More</div>
       )}
