@@ -81,7 +81,7 @@ const FolderCard = ({ folderName, link }: any) => {
               background: "#FFF",
             }}
           >
-            {isHovered ? <><ShareHoverIcon /></> : <> <Share /></>}
+            {isHovered ? <><ShareHoverIcon /></> : <> <Share color={'black'} /></>}
 
           </div>
 

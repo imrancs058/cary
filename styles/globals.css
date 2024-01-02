@@ -473,14 +473,15 @@ a {
   .dropdown-menu.show {
     border-radius: 20px !important;
     position: absolute !important;
-    left: -40px !important;
+    left: -30px !important;
     top: 15px !important;
     /* overflow: hidden !important; */
     box-shadow: 9px 35px 35px rgba(122, 119, 137, 0.44);
 
   }
 
-  . .heading-row {
+
+  .heading-row {
     background: rgba(245, 236, 252, 0.44);
     padding: 10px;
     position: relative;
@@ -589,7 +590,7 @@ a {
     border-spacing: 10px;
     border-width: 3px;
     height: 178px;
-    width: 87% !important;
+    width: 90% !important;
     border-radius: 35px;
     margin-top: 20px;
     display: flex;
@@ -597,6 +598,8 @@ a {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
+    left: 10px;
   }
 
   .user_logo_div {

@@ -66,7 +66,7 @@ const CardItem = ({ number, content, imageUrl }: any) => {
                               </div>
                               <div className="col-6">
                                    <span className={`${style.glassyBackground} float-right font-weight-bold`} >
-                                        <Share />
+                                        <Share color={'white'} />
                                    </span>
                               </div>
                               <div className="col-12">
@@ -178,7 +178,8 @@ const Thebest = () => {
                          className="margin-card"
                          columnsCountBreakPoints={{ 350: 1, 750: 2, 1200: 3 }}
                          style={{
-                              gap: "20px"
+                              gap: "20px",
+                              marginBottom: '100px'
                          }}
 
                     >

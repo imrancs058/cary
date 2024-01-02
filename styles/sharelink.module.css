@@ -167,14 +167,15 @@
 
 
 @media only screen and (min-width: 1200px) {
+
      .glassyBackground {
           background: rgba(255, 255, 255, 0.57);
           backdrop-filter: blur(20px);
           border-radius: 100px;
-          padding: 15px;
+          padding: 18px 14px;
           position: relative;
           top: 2rem;
-          left: 4.7rem;
+          left: 5.4rem;
           margin: 1.5rem;
           color: rgb(0, 0, 0);
           font-style: normal;
@@ -206,6 +207,11 @@
           line-height: normal;
           flex-shrink: 0,
      }
+
+     .card {
+          border-radius: 30px;
+          cursor: pointer,
+     }
 }
 
 @media only screen and (min-width: 1900px) {
@@ -214,10 +220,11 @@
           background: rgba(255, 255, 255, 0.57);
           backdrop-filter: blur(20px);
           border-radius: 100px;
-          padding: 15px;
+          padding: 18px 14px;
+
           position: relative;
           top: 2rem;
-          left: 9.7rem;
+          left: 9.0rem;
           margin: 1.5rem;
           color: rgb(0, 0, 0);
           font-style: normal;
@@ -249,6 +256,7 @@
           line-height: normal;
           flex-shrink: 0,
      }
+
 }
 
 @media only screen and (max-width: 430px) {
@@ -290,7 +298,7 @@
           background: rgba(255, 255, 255, 0.57);
           backdrop-filter: blur(20px);
           border-radius: 100px;
-          padding: 15px;
+          padding: 18px 14px;
           position: relative;
           top: 2rem;
           left: 6.5rem;

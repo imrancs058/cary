@@ -49,7 +49,7 @@ export const glassyBackground: React.CSSProperties = {
 export const numberList: React.CSSProperties = {
      background: "linear-gradient(180deg, #A422F4 -8.33%, #521887 114.17%)",
      borderRadius: '100px',
-     padding: '18px',
+     padding: "18px 16px",
      position: "relative",
      top: '2rem',
      margin: '1.5rem',
