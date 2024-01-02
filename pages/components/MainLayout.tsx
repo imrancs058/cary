@@ -70,7 +70,7 @@ const MainLayout = () => {
   }, [selectedFiles]);
   console.log(selectedFiles, "selectedFiles")
   return (
-    <div className="bg-white p-4">
+    <div className="bg-white p-4 pb-5">
       <Col >
         <div className="row heading-row" >
           <Row className="main_layout_title_row">

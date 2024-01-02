@@ -4,18 +4,19 @@ import { footerLogo, footerDiv, footerText, CopyRight, footerHr } from '../../st
 import { Instagram } from "@/icons/intagram";
 import footerlogo from "../../public/footerlogo.svg";
 import styles from '../../styles/footer.module.css';
+import FooterLogo from "@/icons/FooterLogo";
 const Footer = () => {
      return (
 
-          <Row style={footerDiv} className=" mt-5">
+          <Row style={footerDiv} className="mt-5  postion-relative">
                {/* Footer Upperside */}
-               <div className="row" >
+               <div className="row " >
                     <div className="col-sm-4">
 
                     </div>
                     <div className="col-sm-4 text-center  p-2">
-                         <span >
-                              <Image style={footerLogo} alt="some error" src={footerlogo} />
+                         <span className={styles.box_shadow}>
+                              <FooterLogo/>
                          </span>
                     </div>
                     <div className="col-sm-4">
@@ -27,8 +28,8 @@ const Footer = () => {
                          <div className="row" >
                               <div className="col-3"><hr className={styles.footer_Text_Hr_left} /></div>
 
-                              <div className="col-6 text-center ">
-                                   <div className="row" >
+                              <div className="col-6 text-center pt-5">
+                                   <div className="row pt-5" >
                                         <div className={`${styles.footer_Text} col-12 `}><span className="br-class">Follow the founder and send </span> ideas and feedback</div>
                                         <div className="col-12 " >
                                              <Instagram />
