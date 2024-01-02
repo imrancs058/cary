@@ -470,12 +470,17 @@ a {
 
 
 @media only screen and (max-width: 430px) {
+  .margin-card {
+    margin: 0 0;
+    position: relative;
+    top: -82px
+  }
+
   .dropdown-menu.show {
     border-radius: 20px !important;
     position: absolute !important;
-    left: -30px !important;
+    left: -128px !important;
     top: 15px !important;
-    /* overflow: hidden !important; */
     box-shadow: 9px 35px 35px rgba(122, 119, 137, 0.44);
 
   }
@@ -513,9 +518,7 @@ a {
   }
 
 
-  .margin-card {
-    margin: 0 0;
-  }
+
 
   .main_layout_title {
     color: black;
